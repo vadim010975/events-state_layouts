@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import PropTypes from 'prop-types';
 import ShopCard from "./ShopCard";
 
 function CardsView({ cards }) {
@@ -12,6 +13,10 @@ function CardsView({ cards }) {
       ))}
     </ul>
   );
+}
+
+CardsView.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default CardsView;

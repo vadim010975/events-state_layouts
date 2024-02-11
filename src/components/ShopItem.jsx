@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function ShopItem({ item }) {
 
   return (
@@ -11,6 +13,15 @@ function ShopItem({ item }) {
       <button className="item__button">ADD TO CART</button>
     </>
   );
+}
+
+ShopItem.propTypes = {
+  item: PropTypes.shape({
+    name: PropTypes.string,
+    price: PropTypes.string,
+    color: PropTypes.string,
+    img: PropTypes.string,
+  })
 }
 
 export default ShopItem;
